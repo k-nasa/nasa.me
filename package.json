@@ -2,5 +2,12 @@
   "name": "nasa.me",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "elm": "^0.19.0-bugfix6"
+  },
+  "scripts": {
+    "build": "elm-app build",
+    "start": "elm-app start"
+  }
 }
