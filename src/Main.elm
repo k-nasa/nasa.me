@@ -110,7 +110,7 @@ goTo maybeRoute model =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = "Elm example"
+    { title = "nasa.me"
     , body =
         [ case model.page of
             NotFound ->
