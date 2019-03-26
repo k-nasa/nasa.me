@@ -230,18 +230,33 @@ body {
   width: 300px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: 20px;
+  padding: 5px;
+}
+#page-works .content a {
+  text-decoration: none;
+  color: #000;
+}
+#page-works .content:hover {
+  border: 3px solid #32c2ff;
 }
 #page-works .content .img {
   margin: 10px;
   width: calc(100% - 20px);
   height: 200px;
   object-fit: cover;
+  overflow: hidden;
+  object-position: 0 0;
 }
 #page-works .content .title {
   font-size: 18px;
+  margin: 0 20px;
 }
 #page-works .content .description {
-  font-size: 12px;
+  font-size: 18px;
+  margin: 10px;
+}
+#page-works .content .date {
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map */
