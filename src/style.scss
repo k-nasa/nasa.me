@@ -271,6 +271,28 @@ body {
     width: 50%;
     border-bottom: 3px solid $ACCENT-COLOR;
   }
+
+  ul {
+    padding-top: 200px;
+    margin: 0 auto;
+    width: 60%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 48px;
+    color: #000;
+  }
+
+  p {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 #page-works {
