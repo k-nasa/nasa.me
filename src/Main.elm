@@ -135,16 +135,13 @@ view model =
 addHeaderLinks : Html msg -> Html msg
 addHeaderLinks html =
     div []
-        [ ul []
-            [ viewLink "/about"
-            , viewLink "/works"
-            , viewLink "/contact"
-            , viewLink "/"
+        [ div [ class "header-menue-wrapper" ]
+            [ ul [ class "header-menue" ]
+                [ li [ class "top-link" ] [ a [ href "/" ] [ text "Top" ] ]
+                , li [] [ a [ href "/about" ] [ text "About" ] ]
+                , li [] [ a [ href "/works" ] [ text "Works" ] ]
+                , li [] [ a [ href "/contact" ] [ text "Contact" ] ]
+                ]
             ]
         , html
         ]
-
-
-viewLink : String -> Html msg
-viewLink path =
-    li [] [ a [ href path ] [ text path ] ]
