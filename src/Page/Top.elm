@@ -15,7 +15,8 @@ type Msg
 
 init : Model
 init =
-    Model False
+    -- FIXME ダサいアイコンしか無いので最初から開く
+    Model True
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -28,8 +29,10 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ id "page-top" ]
-        [ div [ class "title" ] [ text "Hey, Universe" ]
-        , div [ class "sub-title" ] [ text "I'm nasa" ]
+        [ div [ class "title-text" ]
+            [ div [ class "title" ] [ text "Hey, Universe" ]
+            , div [ class "sub-title" ] [ text "I'm nasa" ]
+            ]
         , case model.openMenue of
             True ->
                 div [ class "menue-wrapper" ]
@@ -41,11 +44,9 @@ view model =
                     ]
 
             False ->
-                img
-                    [ src "%PUBLIC_URL%/assets/images/site-icon.svg"
-                    , alt "menue icon"
-                    , class "site-icon"
+                div
+                    [ class "site-icon button"
                     , onClick OpenMenue
                     ]
-                    []
+                    [ text "MENUE" ]
         ]
