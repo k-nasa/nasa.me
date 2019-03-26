@@ -33,39 +33,23 @@ view =
             [ p [ class "under-line" ] [ text "自己紹介" ]
             , table [ class "table" ]
                 [ tbody []
-                    [ tr []
-                        [ th [] [ text "性別" ]
-                        , td [] [ p [] [ text "漢(おとこ)" ] ]
-                        ]
-                    , tr []
-                        [ th [] [ text "ひとこと" ]
-                        , td [] [ text "isuconとRustとvimが好き" ]
-                        ]
-                    , tr []
-                        [ th [] [ text "誕生日" ]
-                        , td [] [ text "1998/11/15 現在20歳" ]
-                        ]
-                    , tr []
-                        [ th [] [ text "好きな作品" ]
-                        , td [] [ text "シュタインズゲート、宇宙よりも遠い場所、ラブライブ、コードギアス反逆のルルーシュ、りゅうおうのおしごと、妹さえいればいい" ]
-                        ]
-                    , tr []
-                        [ th [] [ text "好きな技術" ]
-                        , td [] [ text "Rust, Elm, Flutter, PWA, Git, vlangが気になっている" ]
-                        ]
-                    , tr []
-                        [ th [] [ text "好きな食べ物" ]
-                        , td [] [ text "スリランカカレー" ]
-                        ]
-                    , tr []
-                        [ th [] [ text "嫌いなもの" ]
-                        , td [] [ text "アボカド (マジでこれだけは無理)" ]
-                        ]
-                    , tr []
-                        [ th [] [ text "好きなイラストレーター様" ]
-                        , td [] [ text "しらび、カントク、深崎暮人" ]
-                        ]
+                    [ tableRow "性別" "漢(おとこ)"
+                    , tableRow "ひとこと" "isuconとRustとvimが好き"
+                    , tableRow "誕生日" "1998/11/15 現在20歳"
+                    , tableRow "好きな作品" "シュタインズゲート、宇宙よりも遠い場所、ラブライブ、コードギアス反逆のルルーシュ、りゅうおうのおしごと、妹さえいればいい"
+                    , tableRow "好きな技術" "Rust, Elm, Flutter, PWA, Git, vlangが気になっている"
+                    , tableRow "好きな食べ物" "スリランカカレー"
+                    , tableRow "嫌いなもの" "アボカド (マジでこれだけは無理)"
+                    , tableRow "好きなイラストレーター様" "しらび、カントク、深崎暮人"
                     ]
                 ]
             ]
+        ]
+
+
+tableRow : String -> String -> Html msg
+tableRow head body =
+    tr []
+        [ th [] [ text head ]
+        , td [] [ text body ]
         ]
