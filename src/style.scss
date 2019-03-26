@@ -24,8 +24,9 @@ body {
 }
 
 .header-menue-wrapper {
-  position: absolute;
+  position: fixed;
   width: 100%;
+  height: 96px;
   left: 0px;
   top: 0px;
 
@@ -183,11 +184,67 @@ body {
 }
 
 #page-about {
+  padding-top: 96px;
+
+  .profile-icon-section {
+    font-size: 32px;
+
+    h1.name {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
   .profile-icon {
     border: 8px solid #fff;
     border-radius: 50%;
     height: 134px;
-    position: absolute;
+    display: block;
+    margin: 20px auto;
+  }
+
+  section.about-me-text {
+    margin-bottom: 100px;
+  }
+
+  .about-me-text {
+    text-align: center;
+  }
+
+  .under-line {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 600px;
+    border-bottom: 3px solid $ACCENT-COLOR;
+  }
+
+  .about-me-table {
+    .table {
+      text-align: center;
+      margin: 0 auto;
+      width: 500px;
+      margin-bottom: 100px;
+    }
+    table,
+    td,
+    th {
+      border: 1px #283c5f dashed;
+      border-collapse: collapse;
+      border-style: none;
+    }
+
+    th {
+      width: 30%;
+      font-weight: normal;
+      background-color: rgba(50, 194, 255, 0.4);
+      border-style: dashed dashed none none;
+    }
+
+    td {
+      width: 70%;
+      border-style: dashed none none none;
+    }
   }
 }
 
