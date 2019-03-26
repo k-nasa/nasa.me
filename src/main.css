@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #32c0ff;
+  background-color: #32c2ff;
 }
 
 #page-top {
@@ -12,26 +12,20 @@ body {
   margin: 0;
   padding: 0;
   background-size: cover;
-  background-color: #32c0ff;
+  background-color: #32c2ff;
 }
 
 #page-top .title {
   position: absolute;
-  width: 1152px;
-  height: 256px;
-  left: 0px;
-  top: 175px;
-  font-size: 144px;
+  top: 30%;
+  font-size: 12vw;
   text-align: center;
   color: #ffffff;
 }
 #page-top .sub-title {
   position: absolute;
-  width: 647px;
-  height: 150px;
-  left: 0px;
-  top: 407px;
-  font-size: 96px;
+  top: 60%;
+  font-size: 10vw;
   text-align: center;
   color: #32c2ff;
   -webkit-text-stroke-width: 2px;
@@ -42,14 +36,21 @@ body {
   width: 375px;
   height: 108px;
   left: 717px;
-  top: 519px;
+  top: 500px;
 }
-#page-top .menu {
-  position: absolute;
-  width: 1152px;
-  height: 136px;
-  left: 0px;
-  top: 564px;
+#page-top .menue {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50%;
+  padding: 20px;
+  padding-top: 500px;
+}
+#page-top .menue a {
+  font-size: 3.75vw;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */

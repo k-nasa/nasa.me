@@ -32,7 +32,11 @@ view model =
         , div [ class "sub-title" ] [ text "I'm nasa" ]
         , case model.openMenue of
             True ->
-                text "hoge"
+                div [ class "menue" ]
+                    [ a [ href "about" ] [ text "about" ]
+                    , a [ href "works" ] [ text "works" ]
+                    , a [ href "contact" ] [ text "contact" ]
+                    ]
 
             False ->
                 img
