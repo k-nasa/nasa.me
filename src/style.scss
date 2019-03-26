@@ -6,6 +6,18 @@ $FULL-TEXT: 12vw;
 $BIG-TEXT: 10vw;
 $NORMAL-TEXT: 3.75vw;
 
+@mixin pc {
+  @media (min-width: 761px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 760px) {
+    @content;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -26,48 +38,103 @@ body {
 
 #page-top {
   .title {
-    position: absolute;
-    top: 30%;
-    font-size: $FULL-TEXT;
-    text-align: center;
-
     color: $WHITE;
   }
 
   .sub-title {
-    position: absolute;
-    top: 60%;
-
-    font-size: $BIG-TEXT;
-    text-align: center;
-
     color: $ACCENT-COLOR;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
   }
 
   .site-icon {
-    position: absolute;
-    width: 375px;
-    height: 108px;
-    left: 717px;
-    top: 500px;
+    color: $WHITE;
   }
 
-  .menue {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 50%;
-    padding: 20px;
-    padding-top: 500px;
-
-    a {
-      font-size: $NORMAL-TEXT;
-      line-height: normal;
+  @include pc {
+    .title {
+      position: absolute;
+      top: 30%;
+      font-size: $FULL-TEXT;
       text-align: center;
-      text-decoration: none;
+    }
 
-      color: $WHITE;
+    .sub-title {
+      position: absolute;
+      top: 60%;
+
+      font-size: $BIG-TEXT;
+      text-align: center;
+    }
+
+    .site-icon {
+      position: absolute;
+      left: 60%;
+      bottom: 20%;
+      font-size: 5vw;
+    }
+
+    .menue-wrapper {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+    }
+
+    .menue {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      a {
+        font-size: $NORMAL-TEXT;
+        line-height: normal;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px;
+
+        color: $WHITE;
+      }
+    }
+  }
+
+  @include sp {
+    .title-text {
+      font-size: 48px;
+      text-align: center;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .site-icon {
+      width: 100%;
+      padding: 54px 0;
+      margin: 0;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .menue-wrapper {
+      position: absolute;
+      width: 100%;
+      bottom: 10%;
+    }
+
+    .menue {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        font-size: 24px;
+        line-height: normal;
+        text-align: center;
+        text-decoration: none;
+        padding: 5px;
+
+        color: $WHITE;
+      }
     }
   }
 }
