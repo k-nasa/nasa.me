@@ -6,5 +6,4 @@ import Html exposing (..)
 view : Html msg
 view =
     div []
-        [ text "hello top"
-        ]
+        [ text "hello top" ]
