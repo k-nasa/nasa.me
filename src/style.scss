@@ -1,1 +1,75 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+$ACCENT-COLOR: #32c2ff;
+$WHITE: #ffffff;
+
+body {
+  margin: 0;
+  padding: 0;
+  // 仮置き
+  background-color: #32c0ff;
+}
+
+#page-top {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-size: cover;
+  background-color: #32c0ff;
+}
+#page-top {
+  .title {
+    position: absolute;
+    width: 1152px;
+    height: 256px;
+    left: 0px;
+    top: 175px;
+    font-size: 144px;
+    text-align: center;
+
+    color: $WHITE;
+  }
+
+  .sub-title {
+    position: absolute;
+    width: 647px;
+    height: 150px;
+    left: 0px;
+    top: 407px;
+
+    font-size: 96px;
+    text-align: center;
+
+    color: #32c2ff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  .site-icon {
+    position: absolute;
+    width: 375px;
+    height: 108px;
+    left: 717px;
+    top: 519px;
+  }
+
+  .menu {
+    position: absolute;
+    width: 1152px;
+    height: 136px;
+    left: 0px;
+    top: 564px;
+  }
+}
+
+#page-about {
+}
+
+#page-contact {
+}
+
+#page-works {
+}
