@@ -28,7 +28,7 @@ view =
                 "https://github.com/Akidsuki/trunk_beacon"
                 "trunk_hackathon.png"
                 "飯テロボット"
-                "LINE beconを利用して、近くにいる人に飯テロ画像を送りつけるアプリ。 TrunkハッカソンでLINE賞をもらいました"
+                "LINE beconを利用して、近くにいる人に飯テロ画像を送りつけるアプリ。 TrunkハッカソンでLINEさんからLINE賞をもらいました"
                 "2019/3/17"
             , worksContent
                 "https://github.com/k-nasa/lolo"
