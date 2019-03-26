@@ -43,7 +43,6 @@ body {
   a {
     color: $WHITE;
     text-decoration: none;
-    padding: 0 20px;
 
     &.active {
       border-bottom: 3px solid $WHITE;
@@ -57,8 +56,15 @@ body {
   @include pc {
     .top-link {
       padding-right: 200px;
+      a {
+        padding: 0 20px;
+      }
     }
     font-size: 24px;
+  }
+
+  @include sp {
+    font-size: 18px;
   }
 }
 
@@ -184,6 +190,7 @@ body {
 }
 
 #page-about {
+  width: 100%;
   padding-top: 96px;
 
   .profile-icon-section {
@@ -191,7 +198,7 @@ body {
 
     h1.name {
       text-align: center;
-      margin: 0;
+      margin: 0 auto;
     }
   }
 
@@ -215,15 +222,14 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 10px;
-    width: 600px;
+    width: 50%;
     border-bottom: 3px solid $ACCENT-COLOR;
   }
 
   .about-me-table {
     .table {
-      text-align: center;
       margin: 0 auto;
-      width: 500px;
+      width: 70%;
       margin-bottom: 100px;
     }
     table,
@@ -242,6 +248,7 @@ body {
     }
 
     td {
+      padding: 5px;
       width: 70%;
       border-style: dashed none none none;
     }

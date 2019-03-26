@@ -23,7 +23,6 @@ body {
 .header-menue a {
   color: #ffffff;
   text-decoration: none;
-  padding: 0 20px;
 }
 .header-menue a.active {
   border-bottom: 3px solid #ffffff;
@@ -37,6 +36,14 @@ body {
   }
   .header-menue .top-link {
     padding-right: 200px;
+  }
+  .header-menue .top-link a {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 760px) {
+  .header-menue {
+    font-size: 18px;
   }
 }
 
@@ -140,6 +147,7 @@ body {
 }
 
 #page-about {
+  width: 100%;
   padding-top: 96px;
 }
 #page-about .profile-icon-section {
@@ -147,7 +155,7 @@ body {
 }
 #page-about .profile-icon-section h1.name {
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
 }
 #page-about .profile-icon {
   border: 8px solid #fff;
@@ -166,13 +174,12 @@ body {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 600px;
+  width: 50%;
   border-bottom: 3px solid #32c2ff;
 }
 #page-about .about-me-table .table {
-  text-align: center;
   margin: 0 auto;
-  width: 500px;
+  width: 70%;
   margin-bottom: 100px;
 }
 #page-about .about-me-table table,
@@ -189,6 +196,7 @@ body {
   border-style: dashed dashed none none;
 }
 #page-about .about-me-table td {
+  padding: 5px;
   width: 70%;
   border-style: dashed none none none;
 }
