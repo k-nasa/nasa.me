@@ -8,7 +8,7 @@ view : Html msg
 view =
     div [ id "page-contact" ]
         [ h1 [] [ text "Contact" ]
-        , p [] [ text "何かあればTwitterまでご連絡ください。" ]
+        , p [] [ text "何かあればTwitterDMもしくはmail@k-nasa.meまでご連絡ください。" ]
         , ul [ class "links" ]
             [ li []
                 [ a [ href "https://twitter.com/nasa_desu" ]
