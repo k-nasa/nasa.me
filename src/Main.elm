@@ -97,9 +97,7 @@ view : Model -> Browser.Document Msg
 view model =
     { title = "Elm example"
     , body =
-        [ headerLinks
-        , br [] []
-        , case model.page of
+        [ case model.page of
             NotFound ->
                 text "NotFound"
 
@@ -107,24 +105,27 @@ view model =
                 Page.Top.view
 
             AboutPage ->
-                Page.About.view
+                addHeaderLinks Page.About.view
 
             WorksPage ->
-                Page.Works.view
+                addHeaderLinks Page.Works.view
 
             ContactPage ->
-                Page.Contact.view
+                addHeaderLinks Page.Contact.view
         ]
     }
 
 
-headerLinks : Html msg
-headerLinks =
-    ul []
-        [ viewLink "/about"
-        , viewLink "/Works"
-        , viewLink "/contact"
-        , viewLink "/"
+addHeaderLinks : Html msg -> Html msg
+addHeaderLinks html =
+    div []
+        [ ul []
+            [ viewLink "/about"
+            , viewLink "/works"
+            , viewLink "/contact"
+            , viewLink "/"
+            ]
+        , html
         ]
 
 
