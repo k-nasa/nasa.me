@@ -89,6 +89,12 @@ view =
                 "GitHubでの作業を楽にするボット。画像のようにレビュワーのオートアサインやラベル追加、マージ後のブランチ削除などをやってくれる可愛い子"
                 "2019/2/9"
             , worksContent
+                "https://github.com/k-nasa/ruspec"
+                "ruspec.png"
+                "ruspec"
+                "RustでRspec構文のテストを書けるようにするためのライブラリ"
+                "2019/3/11"
+            , worksContent
                 "https://github.com/k-nasa/choco_sable"
                 "gbranch.png"
                 "choco sable"
