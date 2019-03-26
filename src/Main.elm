@@ -26,7 +26,7 @@ main =
 
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
 init flags url key =
-    Model key TopPage
+    Model key (TopPage Page.Top.init)
         |> goTo (Route.parse url)
 
 
@@ -42,7 +42,7 @@ type alias Model =
 
 type Page
     = NotFound
-    | TopPage
+    | TopPage Page.Top.Model
     | AboutPage
     | WorksPage
     | ContactPage
@@ -51,6 +51,7 @@ type Page
 type Msg
     = LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
+    | TopMsg Page.Top.Msg
 
 
 
@@ -71,6 +72,20 @@ update msg model =
         UrlChanged url ->
             goTo (Route.parse url) model
 
+        TopMsg topMsg ->
+            case model.page of
+                TopPage topModel ->
+                    let
+                        ( newTopModel, topCmd ) =
+                            Page.Top.update topMsg topModel
+                    in
+                    ( { model | page = TopPage newTopModel }
+                    , Cmd.map TopMsg topCmd
+                    )
+
+                _ ->
+                    ( model, Cmd.none )
+
 
 goTo : Maybe Route -> Model -> ( Model, Cmd Msg )
 goTo maybeRoute model =
@@ -79,7 +94,7 @@ goTo maybeRoute model =
             ( { model | page = NotFound }, Cmd.none )
 
         Just Route.Top ->
-            ( { model | page = TopPage }
+            ( { model | page = TopPage Page.Top.init }
             , Cmd.none
             )
 
@@ -101,8 +116,9 @@ view model =
             NotFound ->
                 text "NotFound"
 
-            TopPage ->
-                Page.Top.view
+            TopPage topPageModel ->
+                Page.Top.view topPageModel
+                    |> Html.map TopMsg
 
             AboutPage ->
                 addHeaderLinks Page.About.view
