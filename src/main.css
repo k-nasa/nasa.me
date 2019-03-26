@@ -174,6 +174,7 @@ body {
 }
 #page-about .under-line {
   text-align: center;
+  font-size: 32px;
   margin: 0 auto;
   margin-bottom: 10px;
   width: 50%;
@@ -201,6 +202,46 @@ body {
   padding: 5px;
   width: 70%;
   border-style: dashed none none none;
+}
+
+#page-works {
+  width: 100%;
+  padding-top: 96px;
+}
+#page-works h2 {
+  text-align: center;
+  font-size: 32px;
+}
+#page-works .under-line {
+  text-align: center;
+  font-size: 32px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 50%;
+  border-bottom: 3px solid #32c2ff;
+}
+#page-works .works-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#page-works .content {
+  width: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+#page-works .content .img {
+  margin: 10px;
+  width: calc(100% - 20px);
+  height: 200px;
+  object-fit: cover;
+}
+#page-works .content .title {
+  font-size: 18px;
+}
+#page-works .content .description {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
