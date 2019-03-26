@@ -25,6 +25,7 @@ body {
 .header-menue a {
   color: #ffffff;
   text-decoration: none;
+  padding-right: 10px;
 }
 .header-menue a.active {
   border-bottom: 3px solid #ffffff;

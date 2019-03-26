@@ -45,6 +45,7 @@ body {
   a {
     color: $WHITE;
     text-decoration: none;
+    padding-right: 10px;
 
     &.active {
       border-bottom: 3px solid $WHITE;
