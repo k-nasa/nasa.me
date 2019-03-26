@@ -51,6 +51,13 @@ body {
     color: $WHITE;
   }
 
+  .menue {
+    a:hover {
+      border: 2px dashed $WHITE;
+      border-radius: 10%;
+    }
+  }
+
   @include pc {
     .title {
       position: absolute;

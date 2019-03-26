@@ -26,6 +26,10 @@ body {
 #page-top .site-icon {
   color: #ffffff;
 }
+#page-top .menue a:hover {
+  border: 2px dashed #ffffff;
+  border-radius: 10%;
+}
 @media (min-width: 761px) {
   #page-top .title {
     position: absolute;
