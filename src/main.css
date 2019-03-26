@@ -205,6 +205,19 @@ body {
   border-style: dashed none none none;
 }
 
+#page-contact {
+  width: 100%;
+  padding-top: 96px;
+}
+#page-contact h1 {
+  text-align: center;
+  font-size: 48px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 50%;
+  border-bottom: 3px solid #32c2ff;
+}
+
 #page-works {
   width: 100%;
   padding-top: 96px;

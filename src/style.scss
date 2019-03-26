@@ -260,6 +260,17 @@ body {
 }
 
 #page-contact {
+  width: 100%;
+  padding-top: 96px;
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 50%;
+    border-bottom: 3px solid $ACCENT-COLOR;
+  }
 }
 
 #page-works {
