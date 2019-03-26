@@ -23,6 +23,36 @@ body {
   padding: 0;
 }
 
+.header-menue-wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+
+  background: $ACCENT-COLOR;
+}
+
+.header-menue {
+  line-height: normal;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: $WHITE;
+    text-decoration: none;
+    padding: 0 20px;
+  }
+
+  @include pc {
+    .top-link {
+      padding-right: 200px;
+    }
+    font-size: 32px;
+  }
+}
+
 #page-top {
   position: relative;
   width: 100vw;

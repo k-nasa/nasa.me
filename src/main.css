@@ -4,6 +4,35 @@ body {
   padding: 0;
 }
 
+.header-menue-wrapper {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  background: #32c2ff;
+}
+
+.header-menue {
+  line-height: normal;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.header-menue a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 20px;
+}
+@media (min-width: 761px) {
+  .header-menue {
+    font-size: 32px;
+  }
+  .header-menue .top-link {
+    padding-right: 200px;
+  }
+}
+
 #page-top {
   position: relative;
   width: 100vw;
