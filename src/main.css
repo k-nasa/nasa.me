@@ -24,9 +24,15 @@ body {
   text-decoration: none;
   padding: 0 20px;
 }
+.header-menue a.active {
+  border-bottom: 3px solid #ffffff;
+}
+.header-menue a:hover {
+  border-bottom: 3px solid #ffffff;
+}
 @media (min-width: 761px) {
   .header-menue {
-    font-size: 32px;
+    font-size: 24px;
   }
   .header-menue .top-link {
     padding-right: 200px;
@@ -130,6 +136,13 @@ body {
     padding: 5px;
     color: #ffffff;
   }
+}
+
+#page-about .profile-icon {
+  border: 8px solid #fff;
+  border-radius: 50%;
+  height: 134px;
+  position: absolute;
 }
 
 /*# sourceMappingURL=main.css.map */

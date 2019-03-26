@@ -43,13 +43,21 @@ body {
     color: $WHITE;
     text-decoration: none;
     padding: 0 20px;
+
+    &.active {
+      border-bottom: 3px solid $WHITE;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $WHITE;
+    }
   }
 
   @include pc {
     .top-link {
       padding-right: 200px;
     }
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
@@ -175,6 +183,12 @@ body {
 }
 
 #page-about {
+  .profile-icon {
+    border: 8px solid #fff;
+    border-radius: 50%;
+    height: 134px;
+    position: absolute;
+  }
 }
 
 #page-contact {

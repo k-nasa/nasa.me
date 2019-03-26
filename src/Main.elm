@@ -121,27 +121,36 @@ view model =
                     |> Html.map TopMsg
 
             AboutPage ->
-                addHeaderLinks Page.About.view
+                addHeaderLinks Page.About.view model
 
             WorksPage ->
-                addHeaderLinks Page.Works.view
+                addHeaderLinks Page.Works.view model
 
             ContactPage ->
-                addHeaderLinks Page.Contact.view
+                addHeaderLinks Page.Contact.view model
         ]
     }
 
 
-addHeaderLinks : Html msg -> Html msg
-addHeaderLinks html =
+addHeaderLinks : Html msg -> Model -> Html msg
+addHeaderLinks html model =
     div []
         [ div [ class "header-menue-wrapper" ]
             [ ul [ class "header-menue" ]
                 [ li [ class "top-link" ] [ a [ href "/" ] [ text "Top" ] ]
-                , li [] [ a [ href "/about" ] [ text "About" ] ]
-                , li [] [ a [ href "/works" ] [ text "Works" ] ]
-                , li [] [ a [ href "/contact" ] [ text "Contact" ] ]
+                , li [] [ a [ class (addActiveClass AboutPage model), href "/about" ] [ text "About" ] ]
+                , li [] [ a [ class (addActiveClass WorksPage model), href "/works" ] [ text "Works" ] ]
+                , li [] [ a [ class (addActiveClass ContactPage model), href "/contact" ] [ text "Contact" ] ]
                 ]
             ]
         , html
         ]
+
+
+addActiveClass : Page -> Model -> String
+addActiveClass page model =
+    if page == model.page then
+        "active"
+
+    else
+        ""
