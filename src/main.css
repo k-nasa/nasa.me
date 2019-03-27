@@ -1,5 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes disapia {
+  from {
+    height: 25%;
+  }
+  to {
+    height: 0;
+  }
+}
 body {
   font-family: "Noto Sans", "Quicksand", serif;
   margin: 0;
@@ -57,7 +81,6 @@ body {
   margin: 0;
   padding: 0;
   background-size: cover;
-  background-color: #32c2ff;
 }
 
 #page-top .title {
@@ -74,6 +97,65 @@ body {
 #page-top .menue a:hover {
   border: 2px dashed #ffffff;
   border-radius: 10%;
+}
+#page-top .animation-entrypoint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@media (min-width: 761px) {
+  #page-top .animation-entrypoint {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 760px) {
+  #page-top .animation-entrypoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+#page-top .animation-entrypoint div {
+  background-color: #32c2ff;
+  opacity: 0;
+}
+@media (min-width: 761px) {
+  #page-top .animation-entrypoint div {
+    width: 25%;
+    height: 100%;
+  }
+}
+@media (max-width: 760px) {
+  #page-top .animation-entrypoint div {
+    width: 100%;
+    height: 25%;
+  }
+}
+#page-top .animation-entrypoint div:nth-child(1) {
+  animation: fadein 0.05s linear 0.1s 3 alternate forwards;
+}
+#page-top .animation-entrypoint div:nth-child(2) {
+  animation: fadein 0.05s linear 0.2s 3 alternate forwards;
+}
+#page-top .animation-entrypoint div:nth-child(3) {
+  animation: fadein 0.05s linear 0.3s 3 alternate forwards;
+}
+#page-top .animation-entrypoint div:nth-child(4) {
+  animation: fadein 0.05s linear 0.4s 3 alternate forwards;
+}
+#page-top .page-content {
+  opacity: 0;
+  whidth: 100%;
+  height: 100%;
+  background-color: #32c2ff;
+  animation: fadein 2s ease 0.5s forwards;
 }
 @media (min-width: 761px) {
   #page-top .title {
