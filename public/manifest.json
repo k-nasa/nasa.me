@@ -1,6 +1,6 @@
 {
-  "short_name": "Elm App",
-  "name": "Create Elm App Sample",
+  "short_name": "nasa.me",
+  "name": "nasa.me",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#32c2ff",
+  "background_color": "#ffffff",
+  "lang": "ja-jp"
 }
