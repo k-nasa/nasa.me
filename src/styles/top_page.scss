@@ -24,9 +24,14 @@
   }
 
   .menue {
+    a {
+      transition: all 0.5s ease 0s;
+    }
+
     a:hover {
-      border: 2px dashed $WHITE;
+      border: 2px solid $WHITE;
       border-radius: 10%;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     }
   }
 

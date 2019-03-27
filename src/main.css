@@ -94,9 +94,13 @@ body {
 #page-top .site-icon {
   color: #ffffff;
 }
+#page-top .menue a {
+  transition: all 0.5s ease 0s;
+}
 #page-top .menue a:hover {
-  border: 2px dashed #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 10%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 #page-top .animation-entrypoint {
   position: absolute;
