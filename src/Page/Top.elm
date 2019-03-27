@@ -29,24 +29,32 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ id "page-top" ]
-        [ div [ class "title-text" ]
-            [ div [ class "title" ] [ text "Hey, Universe" ]
-            , div [ class "sub-title" ] [ text "I'm nasa" ]
+        [ div [ class "animation-entrypoint" ]
+            [ div [] []
+            , div [] []
+            , div [] []
+            , div [] []
             ]
-        , case model.openMenue of
-            True ->
-                div [ class "menue-wrapper" ]
-                    [ div [ class "menue" ]
-                        [ a [ href "about" ] [ text "about" ]
-                        , a [ href "works" ] [ text "works" ]
-                        , a [ href "contact" ] [ text "contact" ]
+        , div [ class "page-content" ]
+            [ div [ class "title-text" ]
+                [ div [ class "title" ] [ text "Hey, Universe" ]
+                , div [ class "sub-title" ] [ text "I'm nasa" ]
+                ]
+            , case model.openMenue of
+                True ->
+                    div [ class "menue-wrapper" ]
+                        [ div [ class "menue" ]
+                            [ a [ href "about" ] [ text "about" ]
+                            , a [ href "works" ] [ text "works" ]
+                            , a [ href "contact" ] [ text "contact" ]
+                            ]
                         ]
-                    ]
 
-            False ->
-                div
-                    [ class "site-icon button"
-                    , onClick OpenMenue
-                    ]
-                    [ text "MENUE" ]
+                False ->
+                    div
+                        [ class "site-icon button"
+                        , onClick OpenMenue
+                        ]
+                        [ text "MENUE" ]
+            ]
         ]
