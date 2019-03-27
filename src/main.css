@@ -50,15 +50,21 @@ body {
   color: #ffffff;
   text-decoration: none;
   padding-right: 10px;
-  transition: all 0.5s ease 0s;
+}
+@media (min-width: 761px) {
+  .header-menue a {
+    transition: all 0.5s ease 0s;
+  }
 }
 .header-menue a.active {
   border-bottom: 3px solid #ffffff;
 }
-.header-menue a:hover {
-  border: 2px solid #ffffff;
-  border-radius: 10%;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+@media (min-width: 761px) {
+  .header-menue a:hover {
+    border: 2px solid #ffffff;
+    border-radius: 10%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
 }
 @media (min-width: 761px) {
   .header-menue {

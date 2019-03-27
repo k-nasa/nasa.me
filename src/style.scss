@@ -73,16 +73,20 @@ body {
     color: $WHITE;
     text-decoration: none;
     padding-right: 10px;
-    transition: all 0.5s ease 0s;
+    @include pc {
+      transition: all 0.5s ease 0s;
+    }
 
     &.active {
       border-bottom: 3px solid $WHITE;
     }
 
-    &:hover {
-      border: 2px solid $WHITE;
-      border-radius: 10%;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    @include pc {
+      &:hover {
+        border: 2px solid $WHITE;
+        border-radius: 10%;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      }
     }
   }
 
