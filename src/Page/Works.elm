@@ -13,7 +13,7 @@ view =
             [ text "Application" ]
         , section [ class "works-content" ]
             [ worksContent
-                "https://github.com/k-nasa/nasa.me-first"
+                "https://github.com/k-nasa/nasa.me"
                 "second-portfolio.png"
                 "ポートフォリオサイト弐号機"
                 "このサイトです。 Elmで頑張って作った"
