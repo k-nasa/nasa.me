@@ -77,6 +77,12 @@ view =
                 "kriomant/mockers"
                 "Rustのモックライブラリに超細かいパッチを投げた"
                 "2019/1/26"
+            , worksContent
+                "https://github.com/autozimu/LanguageClient-neovim"
+                "language_client.png"
+                "autozimu/LanguageClient"
+                "neovim用language server clientにリファクタPR投げた"
+                "2019/3/2"
             ]
         , p
             [ class "under-line" ]
