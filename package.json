@@ -10,5 +10,8 @@
   "scripts": {
     "build": "elm-app build",
     "start": "elm-app start"
+  },
+  "devDependencies": {
+    "sass": "^1.19.0"
   }
 }
