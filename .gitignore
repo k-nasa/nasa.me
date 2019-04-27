@@ -13,4 +13,3 @@ node_modules
 # Desktop Services Store on macOS
 .DS_Store
 package-lock.json
-yarn.lock
