@@ -135,6 +135,12 @@ view =
                 "fukuoka.rs-vol.1"
                 "Rustのエラーハンドリング方法について話した"
                 "2019/1/22"
+            , worksContent
+                "https://gitpitch.com/k-nasa/fukuoka.rs-vol.2"
+                "fukuoka_rs2.png"
+                "fukuoka.rs-vol.2"
+                "Rustでwebアプリケーションを書いた話をしようとした。が作り始めるのが遅すぎてクソLTになった"
+                "2019/2/29"
             ]
         ]
 
