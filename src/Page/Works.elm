@@ -125,6 +125,41 @@ view =
                 "コマンドラインでぱぱっとメモの作成、grep検索、編集をするためのツール。いい感じにブラウザ上でプレビューできたりする"
                 "2018/10/11"
             ]
+        , p
+            [ class "under-line" ]
+            [ text "Slide" ]
+        , section [ class "works-content" ]
+            [ worksContent
+                "https://gitpitch.com/k-nasa/fukuoka.rs-vol.1"
+                "fukuoka_rs1.png"
+                "fukuoka.rs-vol.1"
+                "Rustのエラーハンドリング方法について話した"
+                "2019/1/22"
+            , worksContent
+                "https://gitpitch.com/k-nasa/fukuoka.rs-vol.2"
+                "fukuoka_rs2.png"
+                "fukuoka.rs-vol.2"
+                "Rustでwebアプリケーションを書いた話をしようとした。が作り始めるのが遅すぎてクソLTになった"
+                "2019/2/29"
+            , worksContent
+                "https://gitpitch.com/k-nasa/fukuoka.rs-vol.3"
+                "fukuoka_rs3.png"
+                "fukuoka.rs-vol.3"
+                "Rustのprocマクロについての話。Rust版Rspecを作ったのでそれに使用したproc_macro(構文拡張)について話した"
+                "2019/4/23"
+            , worksContent
+                "https://gitpitch.com/k-nasa/isucon6_kannsousenn#/"
+                "isucon_kansousen.png"
+                "ネットワーク勉強会での飛び込みLT"
+                "勉強会前日にisuconの過去問をやったのでどうやってスコアを上げていったかを話した。飛び込みということもあり内容は微妙"
+                "2019/2/17"
+            , worksContent
+                "https://speakerdeck.com/nasa_desu/flutterhong-tutemita"
+                "flutter_lt.png"
+                "ITの難しいを簡単にする会#4"
+                "はじめてのLTと言うこともあり感慨深いものがあります。緊張して全く話せなかった思い出です"
+                "2018/6/27"
+            ]
         ]
 
 
