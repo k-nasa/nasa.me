@@ -128,6 +128,14 @@ view =
         , p
             [ class "under-line" ]
             [ text "Slide" ]
+        , section [ class "works-content" ]
+            [ worksContent
+                "https://gitpitch.com/k-nasa/fukuoka.rs-vol.1"
+                "fukuoka_rs1.png"
+                "fukuoka.rs-vol.1"
+                "Rustのエラーハンドリング方法について話した"
+                "2019/1/22"
+            ]
         ]
 
 
