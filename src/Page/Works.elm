@@ -147,6 +147,12 @@ view =
                 "fukuoka.rs-vol.3"
                 "Rustのprocマクロについての話。Rust版Rspecを作ったのでそれに使用したproc_macro(構文拡張)について話した"
                 "2019/4/23"
+            , worksContent
+                "https://gitpitch.com/k-nasa/isucon6_kannsousenn#/"
+                "isucon_kansousen.png"
+                "ネットワーク勉強会での飛び込みLT"
+                "勉強会前日にisuconの過去問をやったのでどうやってスコアを上げていったかを話した。飛び込みということもあり内容は微妙"
+                "2019/2/17"
             ]
         ]
 
