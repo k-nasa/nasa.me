@@ -141,6 +141,12 @@ view =
                 "fukuoka.rs-vol.2"
                 "Rustでwebアプリケーションを書いた話をしようとした。が作り始めるのが遅すぎてクソLTになった"
                 "2019/2/29"
+            , worksContent
+                "https://gitpitch.com/k-nasa/fukuoka.rs-vol.3"
+                "fukuoka_rs3.png"
+                "fukuoka.rs-vol.3"
+                "Rustのprocマクロについての話。Rust版Rspecを作ったのでそれに使用したproc_macro(構文拡張)について話した"
+                "2019/4/23"
             ]
         ]
 
