@@ -153,6 +153,12 @@ view =
                 "ネットワーク勉強会での飛び込みLT"
                 "勉強会前日にisuconの過去問をやったのでどうやってスコアを上げていったかを話した。飛び込みということもあり内容は微妙"
                 "2019/2/17"
+            , worksContent
+                "https://speakerdeck.com/nasa_desu/flutterhong-tutemita"
+                "flutter_lt.png"
+                "ITの難しいを簡単にする会#4"
+                "はじめてのLTと言うこともあり感慨深いものがあります。緊張して全く話せなかった思い出です"
+                "2018/6/27"
             ]
         ]
 
