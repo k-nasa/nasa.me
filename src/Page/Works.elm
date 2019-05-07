@@ -66,6 +66,12 @@ view =
                 "RustのパッケージマネージャのCargoにパッチを投げた"
                 "2018/12/10"
             , worksContent
+                "https://github.com/rustasync/tide"
+                "tide.png"
+                "rustasync/tide"
+                "RustのwebアプリケーションフレームワークにPR投げた"
+                "2019/5/6"
+            , worksContent
                 "https://github.com/rust-lang/rustup.rs"
                 "rust.up.png"
                 "rust-lang/rustup.rs"
