@@ -276,7 +276,7 @@ body {
   color: #000;
 }
 #page-works .content:hover {
-  border: 3px solid #32c2ff;
+  border: 0.5px solid #32c2ff;
 }
 #page-works .content .img {
   margin: 10px;
