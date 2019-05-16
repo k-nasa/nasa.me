@@ -71,8 +71,9 @@ body {
   a {
     color: $WHITE;
     text-decoration: none;
-    padding-right: 10px;
+    padding: 0 10px;
     @include pc {
+      padding: 0 30px;
       transition: all 0.5s ease 0s;
     }
 
