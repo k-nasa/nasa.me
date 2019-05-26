@@ -40,7 +40,7 @@ view =
                     , tableRow "好きな技術" "Rust, Elm, Flutter, PWA, Git, vlangが気になっている"
                     , tableRow "好きな食べ物" "スリランカカレー"
                     , tableRow "嫌いなもの" "アボカド (マジでこれだけは無理)"
-                    , tableRow "好きなイラストレーター様" "しらび、カントク、深崎暮人"
+                    , tableRow "好きなイラストレーター様" "しらび、カントク、深崎暮人、えれっと、Tota"
                     ]
                 ]
             ]
