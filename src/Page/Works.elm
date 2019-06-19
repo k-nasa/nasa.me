@@ -181,7 +181,7 @@ worksContent url imageName title description date =
         [ a [ href url, class "link" ]
             [ img
                 [ class "img"
-                , src ("%PUBLIC_URL%/assets/images/" ++ imageName)
+                , src ("%PUBLIC_URL%/assets/images/" ++ imageName ++ "?nf_resize=fit&w=280&h=200")
                 ]
                 []
             , p [ class "title" ] [ text title ]
