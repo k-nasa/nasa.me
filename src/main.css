@@ -278,9 +278,9 @@ body {
   border: 0.5px solid #32c2ff;
 }
 #page-works .content .img {
-  margin: 10px;
-  width: calc(100% - 20px);
+  width: 280px;
   height: 200px;
+  margin: 10px 10px;
   object-fit: cover;
   overflow: hidden;
   object-position: 0 0;
