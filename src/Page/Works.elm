@@ -43,12 +43,6 @@ view =
                 "購読しているマンガ・ラノベの新着本がでたら通知するアプリ"
                 "2018/8/20"
             , worksContent
-                "https://github.com/k-nasa/reservation_app"
-                "reservation.png"
-                "予約システム"
-                "ファイナンシャルプランナーに予約するためのwebアプリ"
-                "2018/3/20"
-            , worksContent
                 "https://github.com/k-nasa/line-book-bot"
                 "line-book.jpg"
                 "本通知line bot"
