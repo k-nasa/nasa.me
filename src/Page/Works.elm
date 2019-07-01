@@ -13,6 +13,12 @@ view =
             [ text "Application" ]
         , section [ class "works-content" ]
             [ worksContent
+                "https://github.com/k-nasa/roa-typing"
+                "roa-typing.png"
+                "夢月ロア非公式タイピングゲーム(WIP)"
+                "夢月ロアさんの非公式タイピングゲームです。可愛らしい声をご堪能ください"
+                "2019/7/1"
+            , worksContent
                 "https://github.com/k-nasa/nasa.me"
                 "second-portfolio.png"
                 "ポートフォリオサイト弐号機"
