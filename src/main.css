@@ -374,8 +374,8 @@ body {
   display: block;
   margin: 20px auto;
   animation-name: r1;
-  animation-duration: 1.5s;
-  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-delay: 1.1s;
 }
 #page-about section.about-me-text {
   margin-bottom: 100px;
