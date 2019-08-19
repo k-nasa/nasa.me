@@ -46,6 +46,18 @@ $NORMAL-TEXT: 3.75vw;
   }
 }
 
+@keyframes down_menue {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Noto Sans', 'Quicksand', serif;
   margin: 0;
@@ -53,12 +65,17 @@ body {
 }
 
 .header-menue-wrapper {
+    opacity: 0;
   position: fixed;
   width: 100%;
   left: 0px;
   top: 0px;
 
   background: $ACCENT-COLOR;
+  animation-name:down_menue;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .header-menue {
@@ -81,10 +98,10 @@ body {
       border-bottom: 3px solid $WHITE;
     }
 
-    @include pc {
-      &:hover {
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-      }
+    &:hover {
+      background: $WHITE;
+      color: #32c2ff;
+      font-size: 36px;
     }
   }
 

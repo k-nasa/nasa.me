@@ -25,13 +25,14 @@
 
   .menue {
     a {
-      transition: all 0.5s ease 0s;
+      font-size: 30px;
+      padding: 10px;
+      transition: all 1.1s ease;
     }
 
     a:hover {
-      border: 2px solid $WHITE;
-      border-radius: 10%;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      background: $WHITE;
+      color: #32c2ff;
     }
   }
 
@@ -86,13 +87,31 @@
     }
   }
 
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      opacity: 0;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
   .page-content {
     opacity: 0;
-    whidth: 100%;
     height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 
     background-color: $ACCENT-COLOR;
-    animation: fadein 2s ease 0.5s forwards;
+
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
   }
 
   @include pc {

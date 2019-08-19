@@ -1,6 +1,18 @@
 #page-works {
+  @keyframes down {
+    from {
+      margin-top: 100%;
+    }
+
+    to {
+      margin-top: 0;
+    }
+  }
+
   width: 100%;
   padding-top: 96px;
+  animation-name: down;
+  animation-duration: 1s;
 
   h2 {
     text-align: center;
@@ -35,7 +47,7 @@
     }
 
     &:hover {
-      border: 0.5px solid $ACCENT-COLOR;
+      box-shadow: 0 0 5px rgba(50,194,255,1.0);
     }
 
     .img {
