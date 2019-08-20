@@ -74,10 +74,12 @@ body {
 .header-menue a.active {
   border-bottom: 3px solid #ffffff;
 }
-.header-menue a:hover {
-  background: #ffffff;
-  color: #32c2ff;
-  font-size: 36px;
+@media (min-width: 761px) {
+  .header-menue a:hover {
+    background: #ffffff;
+    color: #32c2ff;
+    font-size: 36px;
+  }
 }
 @media (min-width: 761px) {
   .header-menue {

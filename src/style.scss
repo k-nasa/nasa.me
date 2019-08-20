@@ -98,10 +98,12 @@ body {
       border-bottom: 3px solid $WHITE;
     }
 
-    &:hover {
-      background: $WHITE;
-      color: #32c2ff;
-      font-size: 36px;
+    @include pc {
+      &:hover {
+        background: $WHITE;
+        color: #32c2ff;
+        font-size: 36px;
+      }
     }
   }
 
