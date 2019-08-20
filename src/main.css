@@ -34,10 +34,24 @@
     opacity: 1;
   }
 }
+@keyframes menue_fadeout {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 100vh;
+  }
+}
 body {
   font-family: "Noto Sans", "Quicksand", serif;
   margin: 0;
   padding: 0;
+}
+
+.animation-start {
+  animation-name: menue_fadeout;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
 }
 
 .header-menue-wrapper {
@@ -60,22 +74,22 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.header-menue a {
+.header-menue span {
   color: #ffffff;
   text-decoration: none;
   padding: 0 10px;
 }
 @media (min-width: 761px) {
-  .header-menue a {
+  .header-menue span {
     padding: 0 30px;
     transition: all 0.5s ease 0s;
   }
 }
-.header-menue a.active {
+.header-menue span.active {
   border-bottom: 3px solid #ffffff;
 }
 @media (min-width: 761px) {
-  .header-menue a:hover {
+  .header-menue span:hover {
     background: #ffffff;
     color: #32c2ff;
     font-size: 36px;
@@ -88,7 +102,7 @@ body {
   .header-menue .top-link {
     padding-right: 200px;
   }
-  .header-menue .top-link a {
+  .header-menue .top-link span {
     padding: 0 20px;
   }
 }

@@ -58,14 +58,30 @@ $NORMAL-TEXT: 3.75vw;
   }
 }
 
+@keyframes menue_fadeout{
+  from {
+    margin-top: 0;
+  }
+
+  to {
+    margin-top: 100vh;
+  }
+}
+
 body {
   font-family: 'Noto Sans', 'Quicksand', serif;
   margin: 0;
   padding: 0;
 }
 
+.animation-start {
+  animation-name: menue_fadeout;
+  animation-duration: .8s;
+  animation-fill-mode: forwards;
+}
+
 .header-menue-wrapper {
-    opacity: 0;
+  opacity: 0;
   position: fixed;
   width: 100%;
   left: 0px;
@@ -85,7 +101,7 @@ body {
   display: flex;
   justify-content: space-between;
 
-  a {
+  span {
     color: $WHITE;
     text-decoration: none;
     padding: 0 10px;
@@ -110,7 +126,7 @@ body {
   @include pc {
     .top-link {
       padding-right: 200px;
-      a {
+      span {
         padding: 0 20px;
       }
     }
