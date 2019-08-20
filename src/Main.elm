@@ -4,11 +4,14 @@ import Browser
 import Browser.Navigation as Nav
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Html.Events exposing (onClick)
 import Page.About
 import Page.Contact
 import Page.Top
 import Page.Works
+import Process
 import Route exposing (..)
+import Task exposing (Task)
 import Url
 
 
@@ -25,8 +28,8 @@ main =
 
 
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
-init flags url key =
-    Model key (TopPage Page.Top.init)
+init _ url key =
+    Model key (TopPage Page.Top.init) False
         |> goTo (Route.parse url)
 
 
@@ -37,6 +40,7 @@ init flags url key =
 type alias Model =
     { key : Nav.Key
     , page : Page
+    , onAnimation : Bool
     }
 
 
@@ -52,6 +56,8 @@ type Msg
     = LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
     | TopMsg Page.Top.Msg
+    | Sleep String
+    | SleepFinish String
 
 
 
@@ -61,6 +67,12 @@ type Msg
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
+        Sleep url ->
+            ( { model | onAnimation = True }, Task.perform SleepFinish (loadAnimation url) )
+
+        SleepFinish url ->
+            ( { model | onAnimation = False }, Nav.pushUrl model.key url )
+
         LinkClicked urlRequest ->
             case urlRequest of
                 Browser.Internal url ->
@@ -85,6 +97,12 @@ update msg model =
 
                 _ ->
                     ( model, Cmd.none )
+
+
+loadAnimation : url -> Task x url
+loadAnimation url =
+    Process.sleep 800
+        |> Task.map (always url)
 
 
 goTo : Maybe Route -> Model -> ( Model, Cmd Msg )
@@ -132,18 +150,18 @@ view model =
     }
 
 
-addHeaderLinks : Html msg -> Model -> Html msg
+addHeaderLinks : Html Msg -> Model -> Html Msg
 addHeaderLinks html model =
     div []
         [ div [ class "header-menue-wrapper" ]
             [ ul [ class "header-menue" ]
-                [ li [ class "top-link" ] [ a [ href "/" ] [ text "Top" ] ]
-                , li [] [ a [ class (addActiveClass AboutPage model), href "/about" ] [ text "About" ] ]
-                , li [] [ a [ class (addActiveClass WorksPage model), href "/works" ] [ text "Works" ] ]
-                , li [] [ a [ class (addActiveClass ContactPage model), href "/contact" ] [ text "Contact" ] ]
+                [ li [ class "top-link" ] [ span [ onClick (Sleep "/") ] [ text "Top" ] ]
+                , li [] [ span [ class (addActiveClass AboutPage model), onClick (Sleep "/about") ] [ text "About" ] ]
+                , li [] [ span [ class (addActiveClass WorksPage model), onClick (Sleep "/works") ] [ text "Works" ] ]
+                , li [] [ span [ class (addActiveClass ContactPage model), onClick (Sleep "/contact") ] [ text "Contact" ] ]
                 ]
             ]
-        , html
+        , div [ class (animationClass model) ] [ html ]
         ]
 
 
@@ -151,6 +169,15 @@ addActiveClass : Page -> Model -> String
 addActiveClass page model =
     if page == model.page then
         "active"
+
+    else
+        ""
+
+
+animationClass : Model -> String
+animationClass model =
+    if model.onAnimation then
+        "animation-start"
 
     else
         ""
