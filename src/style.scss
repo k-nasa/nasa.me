@@ -18,6 +18,16 @@ $NORMAL-TEXT: 3.75vw;
     @content;
   }
 }
+@keyframes up {
+  from {
+    margin-top: 120vh;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
+
 
 @keyframes fadein {
   from {

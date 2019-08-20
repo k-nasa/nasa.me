@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@keyframes up {
+  from {
+    margin-top: 120vh;
+  }
+  to {
+    margin-top: 0;
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -292,16 +300,8 @@ body {
 #page-works {
   width: 100%;
   padding-top: 96px;
-  animation-name: down;
+  animation-name: up;
   animation-duration: 1s;
-}
-@keyframes down {
-  from {
-    margin-top: 100%;
-  }
-  to {
-    margin-top: 0;
-  }
 }
 #page-works h2 {
   text-align: center;
@@ -370,7 +370,7 @@ body {
 }
 @keyframes up {
   from {
-    margin-top: 100%;
+    margin-top: 120vh;
   }
   to {
     margin-top: 0;
@@ -434,6 +434,8 @@ body {
 #page-contact {
   width: 100%;
   padding-top: 96px;
+  animation-name: up;
+  animation-duration: 1s;
 }
 #page-contact h1 {
   text-align: center;

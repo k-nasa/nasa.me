@@ -3,13 +3,14 @@
   padding-top: 96px;
   animation-name: up;
   animation-duration: 1s;
+
     @keyframes r1 {
       0%   { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
   @keyframes up {
     from {
-      margin-top: 100%;
+      margin-top: 120vh;
     }
 
     to {
