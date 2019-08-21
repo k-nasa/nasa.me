@@ -1,14 +1,15 @@
 #page-about {
   width: 100%;
   padding-top: 96px;
-  animation-name: up;
+  animation-name: about_up;
   animation-duration: 1s;
 
-    @keyframes r1 {
-      0%   { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  @keyframes up {
+  @keyframes r1 {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes about_up {
     from {
       margin-top: 120vh;
     }
