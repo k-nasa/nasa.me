@@ -1,6 +1,19 @@
 #page-contact {
   width: 100%;
   padding-top: 96px;
+  animation-name: contact_up;
+  animation-duration: 1s;
+
+  @keyframes contact_up {
+    from {
+      margin-top: 120vh;
+    }
+
+    to {
+      margin-top: 0;
+    }
+  }
+
 
   h1 {
     text-align: center;

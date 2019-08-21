@@ -1,7 +1,18 @@
 #page-works {
-  @keyframes down {
+
+  width: 100%;
+  padding-top: 96px;
+  animation-name: works_up;
+  animation-duration: 1s;
+
+  h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  @keyframes works_up {
     from {
-      margin-top: 100%;
+      margin-top: 120vh;
     }
 
     to {
@@ -9,15 +20,6 @@
     }
   }
 
-  width: 100%;
-  padding-top: 96px;
-  animation-name: down;
-  animation-duration: 1s;
-
-  h2 {
-    text-align: center;
-    font-size: 32px;
-  }
 
   .under-line {
     text-align: center;
