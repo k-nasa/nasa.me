@@ -21,7 +21,7 @@ main =
         { init = init
         , view = view
         , update = update
-        , subscriptions = \model -> Sub.none
+        , subscriptions = \_ -> Sub.none
         , onUrlChange = UrlChanged
         , onUrlRequest = LinkClicked
         }
@@ -101,7 +101,7 @@ update msg model =
 
 loadAnimation : url -> Task x url
 loadAnimation url =
-    Process.sleep 800
+    Process.sleep 500
         |> Task.map (always url)
 
 
