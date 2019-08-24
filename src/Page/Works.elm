@@ -57,41 +57,6 @@ view =
             ]
         , p
             [ class "under-line" ]
-            [ text "Contribute" ]
-        , section [ class "works-content" ]
-            [ worksContent
-                "https://github.com/rust-lang/cargo"
-                "cargo.png"
-                "rust-lang/cargo"
-                "RustのパッケージマネージャのCargoにパッチを投げた"
-                "2018/12/10"
-            , worksContent
-                "https://github.com/rustasync/tide"
-                "tide.png"
-                "rustasync/tide"
-                "RustのwebアプリケーションフレームワークにPR投げた"
-                "2019/5/6"
-            , worksContent
-                "https://github.com/rust-lang/rustup.rs"
-                "rust.up.png"
-                "rust-lang/rustup.rs"
-                "Rustのツールチェインインストーラーに超細かいリファクタリングを投げた"
-                "2019/1/14"
-            , worksContent
-                "https://github.com/kriomant/mockers"
-                "mockers.png"
-                "kriomant/mockers"
-                "Rustのモックライブラリに超細かいパッチを投げた"
-                "2019/1/26"
-            , worksContent
-                "https://github.com/autozimu/LanguageClient-neovim"
-                "language_client.png"
-                "autozimu/LanguageClient"
-                "neovim用language server clientにリファクタPR投げた"
-                "2019/3/2"
-            ]
-        , p
-            [ class "under-line" ]
             [ text "Tool" ]
         , section [ class "works-content" ]
             [ worksContent
@@ -172,6 +137,35 @@ view =
                 "サポーターズの1on1面談で使った自己紹介スライド。時間は５分だったのに長々と話してしまった、、、"
                 "2019/5/11"
             ]
+        , p
+            [ class "under-line" ]
+            [ text "Contribute" ]
+        , section [ class "works-content" ]
+            [ contributeContent
+                "https://github.com/rust-lang/cargo/commits?author=k-nasa"
+                "rust-lang/cargo"
+            , contributeContent
+                "https://github.com/rustasync/tide/commits?author=k-nasa"
+                "rustasync/tide"
+            , contributeContent
+                "https://github.com/rustasync/surf/commits?author=k-nasa"
+                "rustasync/surf"
+            , contributeContent
+                "https://github.com/rustasync/http-service/commits?author=k-nasa"
+                "rustasync/http-service"
+            , contributeContent
+                "https://github.com/rustasync/route-recognizer/commits?author=k-nasa"
+                "rustasync/route-recognizer"
+            , contributeContent
+                "https://github.com/rust-lang/rustup.rs/commits?author=k-nasa"
+                "rust-lang/rustup.rs"
+            , contributeContent
+                "https://github.com/autozimu/LanguageClient-neovim/commits?author=k-nasa"
+                "autozimu/LanguageClient"
+            , contributeContent
+                "https://github.com/kriomant/mockers/commits?author=k-nasa"
+                "kriomant/mockers"
+            ]
         ]
 
 
@@ -187,5 +181,14 @@ worksContent url imageName title description date =
             , p [ class "title" ] [ text title ]
             , p [ class "description" ] [ text description ]
             , p [ class "date" ] [ text date ]
+            ]
+        ]
+
+
+contributeContent : String -> String -> Html msg
+contributeContent url title =
+    div [ class "content-contribute" ]
+        [ a [ href url, class "link" ]
+            [ p [ class "title" ] [ text title ]
             ]
         ]

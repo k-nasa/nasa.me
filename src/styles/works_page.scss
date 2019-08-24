@@ -37,6 +37,18 @@
     flex-wrap: wrap;
   }
 
+  .content-contribute {
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    padding: 5px;
+    .title {
+      font-size: 18px;
+      margin: 0 20px;
+    }
+  }
+
+
   .content {
     width: 300px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
