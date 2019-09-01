@@ -6,11 +6,11 @@
 
   @keyframes contact_up {
     from {
-      margin-top: 120vh;
+      opacity: 0;
     }
 
     to {
-      margin-top: 0;
+      opacity: 1;
     }
   }
 

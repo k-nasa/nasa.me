@@ -101,7 +101,7 @@ update msg model =
 
 loadAnimation : url -> Task x url
 loadAnimation url =
-    Process.sleep 500
+    Process.sleep 600
         |> Task.map (always url)
 
 
