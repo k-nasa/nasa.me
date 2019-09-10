@@ -13,6 +13,12 @@ view =
             [ text "Application" ]
         , section [ class "works-content" ]
             [ worksContent
+                "https://github.com/k-nasa/HAPPY_BIRTHDAY_GINKO"
+                "happy-birthday-ginko.png"
+                "空銀子生誕祭2019非公式サイト"
+                "りゅうおうのおしごとの空銀子さんの生誕祝サイトです"
+                "2019/9/9"
+            , worksContent
                 "https://github.com/k-nasa/roa-typing"
                 "roa-typing.png"
                 "夢月ロア非公式タイピングゲーム"
