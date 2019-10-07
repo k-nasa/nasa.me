@@ -148,6 +148,12 @@ view =
             [ text "Contribute" ]
         , section [ class "works-content" ]
             [ contributeContent
+                "https://github.com/async-rs/async-std/commits?author=k-nasa"
+                "async-rs/async-std"
+            , contributeContent
+                "https://github.com/rust-lang/cargo/commits?author=k-nasa"
+                "rust-lang/cargo"
+            , contributeContent
                 "https://github.com/rust-lang/cargo/commits?author=k-nasa"
                 "rust-lang/cargo"
             , contributeContent
