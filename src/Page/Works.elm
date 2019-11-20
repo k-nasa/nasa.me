@@ -66,6 +66,18 @@ view =
             [ text "Tool" ]
         , section [ class "works-content" ]
             [ worksContent
+                "https://github.com/k-nasa/rgh"
+                "rgh.png"
+                "rgh"
+                "GitHub releaseへのバイナリアップロードが面倒くさいので、コマンドを叩くと、指定したディレクトリ配下のファイルがアップロードされるようにした。"
+                "2019/11/20"
+            , worksContent
+                "https://github.com/k-nasa/goku"
+                "goku.png"
+                "goku"
+                "HTTPサーバーの負荷計測ツールを作った。goku kamehameha コマンドでかめはめ波を撃ちサーバーにリクエストを投げる"
+                "2019/11/20"
+            , worksContent
                 "https://github.com/k-nasa/ai-chan"
                 "ai_chan.png"
                 "ai-chann"
@@ -128,6 +140,12 @@ view =
             [ text "Slide" ]
         , section [ class "works-content" ]
             [ worksContent
+                "https://gitpitch.com/k-nasa/sushi_lightning_by_hackz_vol.2"
+                "goku_lt.png"
+                "SUSHI LIGHTNIG by Hack'z Vol.2"
+                "HTTPサーバーの負荷計測ツールを作った話をした。はじめて笑いを重視してLTをやった"
+                "2019/11/17"
+            , worksContent
                 "https://gitpitch.com/k-nasa/fukuoka.rs-vol.1"
                 "fukuoka_rs1.png"
                 "fukuoka.rs-vol.1"
