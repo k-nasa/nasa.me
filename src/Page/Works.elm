@@ -63,7 +63,7 @@ view =
             ]
         , p
             [ class "under-line" ]
-            [ text "Tool" ]
+            [ text "Tools" ]
         , section [ class "works-content" ]
             [ worksContent
                 "https://github.com/k-nasa/rgh"
