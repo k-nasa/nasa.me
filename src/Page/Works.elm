@@ -10,7 +10,7 @@ view =
         [ h2 [] [ text "作ったもの" ]
         , p
             [ class "under-line" ]
-            [ text "Application" ]
+            [ text "Applications" ]
         , section [ class "works-content" ]
             [ worksContent
                 "https://github.com/k-nasa/HAPPY_BIRTHDAY_GINKO"
@@ -104,6 +104,27 @@ view =
             ]
         , p
             [ class "under-line" ]
+            [ text "Contribute" ]
+        , section [ class "works-content" ]
+            [ contributeContent
+                "https://github.com/async-rs/async-std/commits?author=k-nasa"
+                "async-rs/async-std (member)"
+                "たくさんPR送ってたらメンバーに誘われた。なのでメンバーになった。継続で気にPR送ったり、コードレビューをしている"
+            , contributeContent
+                "https://github.com/rust-lang/cargo/commits?author=k-nasa"
+                "rust-lang/cargo"
+                "オプションの追加や、ドキュメントの追加などを行っていた"
+            , contributeContent
+                "https://github.com/rustasync/tide/commits?author=k-nasa"
+                "rustasync/tide"
+                "ミドルウェアの実装や、機能追加PRを送っている"
+            , contributeContent
+                "https://github.com/rustasync/surf/commits?author=k-nasa"
+                "rustasync/surf"
+                "バグ修正や、機能追加PRを送っている"
+            ]
+        , p
+            [ class "under-line" ]
             [ text "Slide" ]
         , section [ class "works-content" ]
             [ worksContent
@@ -143,41 +164,6 @@ view =
                 "サポーターズの1on1面談で使った自己紹介スライド。時間は５分だったのに長々と話してしまった、、、"
                 "2019/5/11"
             ]
-        , p
-            [ class "under-line" ]
-            [ text "Contribute" ]
-        , section [ class "works-content" ]
-            [ contributeContent
-                "https://github.com/async-rs/async-std/commits?author=k-nasa"
-                "async-rs/async-std"
-            , contributeContent
-                "https://github.com/rust-lang/cargo/commits?author=k-nasa"
-                "rust-lang/cargo"
-            , contributeContent
-                "https://github.com/rust-lang/cargo/commits?author=k-nasa"
-                "rust-lang/cargo"
-            , contributeContent
-                "https://github.com/rustasync/tide/commits?author=k-nasa"
-                "rustasync/tide"
-            , contributeContent
-                "https://github.com/rustasync/surf/commits?author=k-nasa"
-                "rustasync/surf"
-            , contributeContent
-                "https://github.com/rustasync/http-service/commits?author=k-nasa"
-                "rustasync/http-service"
-            , contributeContent
-                "https://github.com/rustasync/route-recognizer/commits?author=k-nasa"
-                "rustasync/route-recognizer"
-            , contributeContent
-                "https://github.com/rust-lang/rustup.rs/commits?author=k-nasa"
-                "rust-lang/rustup.rs"
-            , contributeContent
-                "https://github.com/autozimu/LanguageClient-neovim/commits?author=k-nasa"
-                "autozimu/LanguageClient"
-            , contributeContent
-                "https://github.com/kriomant/mockers/commits?author=k-nasa"
-                "kriomant/mockers"
-            ]
         ]
 
 
@@ -197,10 +183,11 @@ worksContent url imageName title description date =
         ]
 
 
-contributeContent : String -> String -> Html msg
-contributeContent url title =
-    div [ class "content-contribute" ]
+contributeContent : String -> String -> String -> Html msg
+contributeContent url title description =
+    div [ class "content" ]
         [ a [ href url, class "link" ]
             [ p [ class "title" ] [ text title ]
+            , p [ class "description" ] [ text description ]
             ]
         ]
